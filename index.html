@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoutineCraft | Haftalık Plan & PDF Üretici</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Üst Kontrol Barı (Yazdırırken gizlenir) -->
+    <header class="toolbar no-print">
+      <div class="brand">
+        <span class="logo">🗓️ RoutineCraft</span>
+        <span class="status" id="save-status">✓ Otomatik kaydedildi</span>
+      </div>
+      <div class="actions">
+        <button id="preset-btn" class="btn secondary">⚡ Örnek Beslenme & Spor Yükle</button>
+        <button id="export-btn" class="btn secondary">📦 JSON İndir</button>
+        <button id="clear-btn" class="btn danger">🗑️ Sıfırla</button>
+        <button id="print-btn" class="btn primary">🖨️ A4 PDF Olarak Kaydet</button>
+      </div>
+    </header>
+
+    <!-- Yazdırılabilir A4 Alanı -->
+    <main class="sheet">
+      <div class="sheet-header">
+        <input type="text" id="plan-title" class="title-input" value="Haftalık Beslenme & Antrenman Programı" />
+        <p class="sheet-subtitle">Hücrelere tıklayarak programı düzenleyebilirsiniz. Değişiklikler tarayıcıya otomatik kaydedilir.</p>
+      </div>
+
+      <div class="table-container">
+        <table id="planner-table">
+          <thead>
+            <tr>
+              <th width="12%">Gün</th>
+              <th width="22%">Sabah / Kahvaltı</th>
+              <th width="22%">Öğle</th>
+              <th width="22%">Akşam</th>
+              <th width="22%">Ara Öğün & Antrenman</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- JS ile günler ve düzenlenebilir hücreler buraya oluşturulacak -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
